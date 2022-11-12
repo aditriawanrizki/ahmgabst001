@@ -4,8 +4,11 @@
  */
 package id.co.ahm.ga.bst.app001.dao;
 
+import id.co.ahm.ga.bst.app001.vo.Bst001MstAttachmentInsertVo;
 import id.co.ahm.ga.bst.app001.vo.Bst001MstDocFilterVo;
+import id.co.ahm.ga.bst.app001.vo.Bst001MstDocInsertVo;
 import id.co.ahm.ga.bst.app001.vo.Bst001MstDocVo;
+import id.co.ahm.ga.bst.app001.vo.Bst001MstPropertieInsertVo;
 import id.co.ahm.jxf.dao.DefaultDao;
 import java.util.List;
 
@@ -24,6 +27,12 @@ public interface Bst001AhmgaMstDocTypesDao extends DefaultDao<String, String>{
     public void deleteWorkflowEkternal(String id);
     public void deleteWorkflowInternal(String id);
     public void deletePropertieDoc(String id);
-    public void insertMasterDoc(Bst001MstDocVo mstDocVo, String dateCreated, String username);
+    public void insertMasterDoc(Bst001MstDocInsertVo mstDocVo, String dateCreated, String username);
+    public void insertAttachment(Bst001MstAttachmentInsertVo mstAttachmentVo, String dateCreated, String username, String attachmenName);
+    public void insertPropertie(Bst001MstPropertieInsertVo mstPropertiesVo, String dateCreated, String username);
+    public void editMasterDoc(Bst001MstDocInsertVo mstDocVo, String dateCreated, String username);
+    public void editAttachment(Bst001MstAttachmentInsertVo mstAttachmentVo, String dateCreated, String username, String attachmentName);
+    public void editPropertie(Bst001MstPropertieInsertVo mstPropertiesVo, String dateCreated, String username);
+    
        
 }
